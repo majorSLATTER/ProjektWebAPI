@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  microservice_todo_iba:
+    image: ${DOCKER_REGISTRY-}microservicetodoiba
+    build:
+      context: .
+      dockerfile: Microservice_TODO_IBA/Dockerfile
+    networks:
+      - microservice_network
+
+networks:
+  microservice_network:
